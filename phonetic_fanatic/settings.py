@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'phonetic_fanatic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'words',
+        'NAME': 'categories',
     }
 }
 
