@@ -9,4 +9,5 @@ urlpatterns = [
     path('categories/create/', views.CategoryCreate.as_view(), name='categories_create'),
     path('categories/<int:pk>/update', views.CategoryUpdate.as_view(), name='categories_update'),
     path('categories/<int:pk>/delete', views.CategoryDelete.as_view(), name='categories_delete'),
+    path('accounts/signup/', views.signup, name='signup'),
 ]
