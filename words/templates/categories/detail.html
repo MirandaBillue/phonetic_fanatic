@@ -6,9 +6,12 @@
         <h1>{{ category.name }}</h1>
      
         <h2>{{ category.gradelevel }}</h2>
-
+<div>
+    <a href="{% url 'categories_update' category.id %}">Edit</a>
+    <a href="{% url 'categories_delete' category.id %}">Delete</a>
+</div>
     </div>
 </div>
 
 
-{% endfor %} {% endblock %}
+{% endblock %}
