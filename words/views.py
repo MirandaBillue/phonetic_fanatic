@@ -11,3 +11,8 @@ def about(request):
 def categories_index(request):
     categories = Category.objects.all()
     return render(request, 'categories/index.html', { 'categories': categories })
+
+
+def categories_detail(request, category_id):
+    category = Category.objects.get(id=category_id)
+    return render(request, 'categories/detail.html', { 'category': category })

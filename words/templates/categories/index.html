@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Categories</h1>
+
+{% for category in categories %}
+<div>
+    <a href="/categories/{{ category.id }}">
+        <div>
+            <h1>{{ category.name }}</h1>
+            <h2>{{ category.gradelevel }}</h2>
+
+        </div>
+    </a>
+</div>
+
+
+{% endfor %} {% endblock %}
