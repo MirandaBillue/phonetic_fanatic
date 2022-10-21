@@ -14,3 +14,14 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse('detail', kwargs={'category_id': self.id})
+
+
+
+class Photo(models.Model):
+    url = models.CharField(max_length=200)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Photo for category_id: {self.category_id} @{self.url}"
+
+

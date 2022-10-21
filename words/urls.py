@@ -10,4 +10,5 @@ urlpatterns = [
     path('categories/<int:pk>/update', views.CategoryUpdate.as_view(), name='categories_update'),
     path('categories/<int:pk>/delete', views.CategoryDelete.as_view(), name='categories_delete'),
     path('accounts/signup/', views.signup, name='signup'),
+    path('categories/<int:category_id>/add_photo/', views.add_photo, name='add_photo'),
 ]
