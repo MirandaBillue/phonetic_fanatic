@@ -1,7 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
+{% block additional_styles %}
+<style>
+   body {
+    background-image: url(https://i.imgur.com/vxNoItD.png);
+   }
+</style>
+{% endblock %}
+
+
+<div class="c-form">
 {% if object %}
-<h1>Edit<span>{{object.name}}</span></h1>
+<h1>Edit <span>{{object.name}}</span></h1>
 {% else %}
 <h1>Add Category</h1>
 {% endif %}
@@ -12,6 +22,7 @@
    
     {{ form.as_table }}
   </table>
-  <input type="submit" value="Submit!" class="btn" />
+  <input type="submit" value="Submit" class="btn" />
 </form>
+</div>
 {% endblock %}

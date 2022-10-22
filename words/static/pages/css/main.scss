@@ -1,0 +1,284 @@
+$nav-height: 60px;
+$nav-background: #ffdf2b;
+$nav-font-color: #000000;
+$link-hover-color: #fa0404;
+$breakpoint: 799px;
+$foot-background: black;
+$foot-font-color: white;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+body {
+    background-image: url(https://i.imgur.com/YJD3WDB.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.nav {
+    height: $nav-height;
+    background: $nav-background;
+}
+
+.nav-container {
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Archivo Black', sans-serif;
+    float: left;
+    line-height: $nav-height;
+    text-transform: uppercase;
+    font-size: 1.8em;
+
+}
+
+nav {
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 1rem;
+            float: left;
+            position: relative;
+
+            a {
+                display: block;
+                padding: 10px 20px 0 20px;
+                line-height: 50px;
+                background: $nav-background;
+                color: $nav-font-color;
+                text-decoration: none;
+
+                &::before {
+                    transition: 300ms;
+                    height: 5px;
+                    content: "";
+                    position: absolute;
+                    background-color: $link-hover-color;
+                    width: 0%;
+                    bottom: 0px;
+                }
+
+                &:hover::before {
+                    width: 70%;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: $breakpoint) {
+    nav {
+        width: 100%;
+        padding: $nav-height 0 15px;
+
+        ul {
+            display: none;
+
+            li {
+                float: none;
+
+                a {
+                    padding: 15px;
+                    line-height: 20px;
+
+                    &:hover::before {
+                        width: 20%;
+                    }
+                }
+
+                ul li a {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint) {
+    .nav-list {
+        display: block !important;
+    }
+}
+
+.home {
+    margin: 375px;
+    width: 350px;
+    height: 65px;
+
+    h1 {
+        font-size: 90px;
+        font-family: 'Abril Fatface', cursive;
+        text-align: center;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 70px;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        color: red;
+    }
+}
+
+.about {
+    margin: 375px;
+    width: 350px;
+    height: 60px;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 60px;
+    }
+}
+
+.c-index {
+    margin: 375px;
+    width: 350px;
+    height: 60px;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 50px;
+    }
+
+    h2 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 20px;
+    }
+}
+
+.c-detail {
+    margin: 100px;
+    width: 350px;
+    height: 65vh;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 50px;
+    }
+
+    form {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+
+    input {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+}
+
+.img-text {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 15px;
+}
+
+a {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 15px; 
+}
+
+.c-form {
+    margin: 375px;
+    width: 350px;
+    height: 60px;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 50px;
+        display: inline;
+    }
+
+    form {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+
+    input {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+}
+
+
+.c-delete {
+    margin: 375px;
+    height: 70px;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 70px;
+    }
+    h2 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 30px;
+    }
+    input {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 20px;
+    }
+}
+
+
+.signup {
+    margin: 375px;
+    height: 60px;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 50px;
+    }
+
+    form {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+
+    input {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+}
+
+
+.login {
+    margin: 375px;
+    height: 60px;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 60px;
+    }
+
+    form {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 25px;
+    }
+
+    input {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 20px;
+    }
+}
+
+
+footer {
+    height: $nav-height;
+    background: $foot-background;
+    color: $foot-font-color;
+
+    .right {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}

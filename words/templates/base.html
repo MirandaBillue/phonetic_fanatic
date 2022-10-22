@@ -1,4 +1,17 @@
-{% load static %}
+{% load sass_tags %}
+{% block additional_styles %}
+<style>
+   body {
+    background-image: url(https://i.imgur.com/vxNoItD.png);
+    background-image: url(https://i.imgur.com/aQfHz3d.png);
+    background-image: url(https://i.imgur.com/XyQHGWe.png);
+    background-image: url(https://i.imgur.com/6LiL524.png);
+    background-image: url(https://i.imgur.com/JNjxAXY.png);
+   }
+</style>
+
+{% endblock %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,21 +21,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhoneticFanactict</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link href="{% sass_src 'pages/css/main.scss' %}" rel="stylesheet" type="text/css" />
+   
 
 </head>
 
-<body>
-    <header class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
+<body class="body">
+    <header>
+        <nav class="nav">
+            <div class="nav-container">
                 <ul>
                     <li>
-                        <a href="/" class="left brand-logo">&nbsp;&nbsp;PhoneticFanatic</a>
+                        <a href="/" class="logo">&nbsp;&nbsp;PhoneticFanatic</a>
                     </li>
                 </ul>
-                <ul class="right">
+                <ul class="nav-list">
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'index' %}">Categories</a></li>
                     {% if user.is_authenticated %}

@@ -1,23 +1,25 @@
 {% extends 'base.html' %} {% block content %}
 
+{% block additional_styles %}
+<style>
+   body {
+    background-image: url(https://i.imgur.com/aQfHz3d.png);
+   }
+</style>
+{% endblock %}
 
-{% for photo in category.photo_set.all %}
-<img class="responsive-img card-panel" src="{{photo.url}}" />
-{% empty %}
-<div class="card-panel teal-text center-align">No Photos Uploaded</div>
-{% endfor %}
-<div>
+<div class="c-detail">
     <div>
         <div>
-            <h1>{{ category.name }}</h1>
+            <h1>{{ category.name }} {{ category.gradelevel }}</h1>
 
             {% for photo in category.photo_set.all %}
             <img class="responsive-img card-panel" src="{{photo.url}}">
             {% empty %}
-            <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+            <div class="img-text">No Photos Uploaded</div>
             {% endfor %}
 
-            <h2>{{ category.gradelevel }}</h2>
+          
             <div>
                 <a href="{% url 'categories_update' category.id %}">Edit</a>
                 <a href="{% url 'categories_delete' category.id %}">Delete</a>
