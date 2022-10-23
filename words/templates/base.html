@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhoneticFanactict</title>
     <link href="{% sass_src 'pages/css/main.scss' %}" rel="stylesheet" type="text/css" />
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
 
@@ -37,9 +37,11 @@
                 </ul>
                 <ul class="nav-list">
                     <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'index' %}">Categories</a></li>
                     {% if user.is_authenticated %}
+                    <li><a href="{% url 'index' %}">Categories</a></li>
+                    <li><a href="{% url 'cards_index' %}">Word Cards</a></li>
                     <li><a href="{% url 'categories_create' %}">Add a Category</a></li>
+                    <li><a href="{% url 'cards_create' %}">Add a Card</a></li>
                     <li><a href="{% url 'logout' %}">Log Out</a></li>
                     {% else %}
                     <li><a href="{% url 'signup' %}">Sign Up</a></li>

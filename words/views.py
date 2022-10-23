@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.views.generic import ListView
+from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -6,9 +8,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 import uuid
 import boto3
-from .models import Category, Photo
+from .models import Category, Photo, Card
 S3_BASE_URL = 'https://s3.us-east-1.amazonaws.com/'
-BUCKET = 'words11-11'
+BUCKET = 'cards11-11'
 
 # Create your views here.
 def home(request):
@@ -23,8 +25,14 @@ def categories_index(request):
     return render(request, 'categories/index.html', { 'categories': categories })
 
 def categories_detail(request, category_id):
-    category = Category.objects.get(id=category_id)
-    return render(request, 'categories/detail.html', { 'category': category })
+    category = Category.objects.get(id=category_id)   
+
+    return render(request, 'categories/detail.html', { 
+        'category': category  })  
+
+def assoc_card(request, category_id, card_id):
+    Category.objects.get(id=category_id).cards.add(card_id)
+    return redirect('detail', category_id=category_id)
 
 def signup(request):
     error_message = ''
@@ -50,11 +58,31 @@ class CategoryCreate(LoginRequiredMixin, CreateView):
 
 class CategoryUpdate(UpdateView):
     model = Category
-    fields = ['name', 'gradelevel']    
+    fields = ('name', 'gradelevel')    
 
 class CategoryDelete(DeleteView):
     model = Category  
     success_url = '/categories/'
+
+class CardCreate(CreateView):
+    model = Card  
+    fields = ['word']
+
+class CardUpdate(UpdateView):
+    model = Card 
+    fields = ('word')
+
+class CardDelete(DeleteView):
+    model = Card  
+    success_url = '/cards/'
+
+class CardDetail(DetailView):
+    model = Card
+    template_name = 'cards/detail.html'
+
+class CardList(ListView):
+    model = Card
+    template_name = 'cards/index.html'  
 
 @login_required
 def add_photo(request, category_id):

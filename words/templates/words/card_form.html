@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card-form">
+    {% if object %}
+    <h1>Update {{ object.name }}</h1>
+    {% else %}
+    <h1>Add Card</h1>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="{% if object %} 
+        Update Card {% else %} Add Card {% endif %}">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="card-detail">
+    <a href="{% url 'cards_detail' card.id %}">
+        <div class="card-content">
+            <span> {{ card.word }}</span>
+        </div>
+        <div>
+            <a href="{% url 'cards_update' card.id %}">Edit</a>
+            <a href="{% url 'cards_delete' card.id %}">Delete</a>
+        </div>
+    </a>
+</div>
+
+{% endblock %}

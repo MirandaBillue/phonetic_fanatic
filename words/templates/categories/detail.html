@@ -2,40 +2,54 @@
 
 {% block additional_styles %}
 <style>
-   body {
-    background-image: url(https://i.imgur.com/aQfHz3d.png);
-   }
+    body {
+        background-image: url(https://i.imgur.com/aQfHz3d.png);
+    }
 </style>
 {% endblock %}
 
 <div class="c-detail">
     <div>
         <div>
-            <h1>{{ category.name }} {{ category.gradelevel }}</h1>
+            <h1>{{ category.name }} Grade Level:{{ category.gradelevel }}</h1>
 
-            {% for photo in category.photo_set.all %}
-            <img class="responsive-img card-panel" src="{{photo.url}}">
-            {% empty %}
-            <div class="img-text">No Photos Uploaded</div>
-            {% endfor %}
-
-          
             <div>
                 <a href="{% url 'categories_update' category.id %}">Edit</a>
                 <a href="{% url 'categories_delete' category.id %}">Delete</a>
             </div>
-
-          
-            <form action="{% url 'add_photo' category.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
-                {% csrf_token %}
-                <input type="file" name="photo-file" />
-                <br /><br />
-                <input type="submit" class="btn" value="Upload Photo" />
-            </form>
-
+            <h3>{{ category.name }}'s Words</h3>
+            {% if category.cards.count %} {% for card in category.cards.all %}
+            <div class="card">
+                <div class="card-content">
+                    A <span>
+                        {{ card.word }}</span>
+                    </span>
+                </div>
+            </div>
+            {% endfor %} {% else %}
+            <h5>No words :(</h5>
+            {% endif %}
         </div>
     </div>
-</div>
+    <div>
 
+
+    </div>
+    {% for photo in category.photo_set.all %}
+    <img class="responsive-img card-panel" src="{{photo.url}}">
+    {% empty %}
+    <div class="img-text">No Photos Uploaded</div>
+    {% endfor %}
+
+    <form action="{% url 'add_photo' category.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
+        {% csrf_token %}
+        <input type="file" name="photo-file" />
+        <br /><br />
+        <input type="submit" class="btn" value="Upload Photo" />
+    </form>
+
+</div>
+</div>
+</div>
 
 {% endblock %}

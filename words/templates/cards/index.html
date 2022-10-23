@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% for card in object_list %}
+<div class="card-index">
+    <a href="{% url 'cards_detail' card.id %}">
+        <div class="card-content">
+            <span> {{ card.word }}</span>
+        </div>
+    </a>
+</div>
+{% endfor %}
+
+
+{% endblock %}

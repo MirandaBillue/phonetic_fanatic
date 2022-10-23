@@ -4,9 +4,17 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
+class Card(models.Model):
+    word = models.CharField(max_length=100)
+
+    def get_absolute_url(self):
+        return reverse('cards_detail', kwargs={'pk': self.id})
+
+
 class Category(models.Model):
     name = models.CharField(max_length=100)
     gradelevel = models.IntegerField()
+    cards = models.ManyToManyField(Card)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -14,7 +22,6 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse('detail', kwargs={'category_id': self.id})
-
 
 
 class Photo(models.Model):

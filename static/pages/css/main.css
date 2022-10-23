@@ -180,9 +180,9 @@ a {
 footer {
   height: 60px;
   background: black;
-  color: white; }
-  footer .right {
-    text-align: center;
-    font-size: 1.3rem; }
+  font-family: 'Archivo Black', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem; }
 
 /*# sourceMappingURL=main.css.map */

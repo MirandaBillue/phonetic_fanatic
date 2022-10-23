@@ -11,4 +11,10 @@ urlpatterns = [
     path('categories/<int:pk>/delete', views.CategoryDelete.as_view(), name='categories_delete'),
     path('accounts/signup/', views.signup, name='signup'),
     path('categories/<int:category_id>/add_photo/', views.add_photo, name='add_photo'),
+    path('cards/', views.CardList.as_view(), name='cards_index'),
+    path('cards/<int:pk>/', views.CardDetail.as_view(), name='cards_detail'),
+    path('cards/create/', views.CardCreate.as_view(), name='cards_create'),
+    path('cards/<int:pk>/update', views.CardUpdate.as_view(), name='cards_update'),
+    path('cards/<int:pk>/delete', views.CardDelete.as_view(), name='cards_delete'),
+    path('categories/<int:category_id>/assoc_card/<int:card_id>/', views.assoc_card, name='assoc_card'),
 ]
