@@ -7,6 +7,9 @@ from django.contrib.auth.models import User
 class Card(models.Model):
     word = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.word
+
     def get_absolute_url(self):
         return reverse('cards_detail', kwargs={'pk': self.id})
 
@@ -26,9 +29,11 @@ class Category(models.Model):
 
 class Photo(models.Model):
     url = models.CharField(max_length=200)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    card = models.ForeignKey(Card, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"Photo for category_id: {self.category_id} @{self.url}"
+        return f"Photo for card_id: {self.card_id} @{self.url}"
+
+      
 
 

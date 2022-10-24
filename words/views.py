@@ -1,3 +1,4 @@
+from urllib import response
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
@@ -6,11 +7,13 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from PyDictionary import PyDictionary
+import requests
 import uuid
 import boto3
 from .models import Category, Photo, Card
 S3_BASE_URL = 'https://s3.us-east-1.amazonaws.com/'
-BUCKET = 'cards11-11'
+BUCKET = 'words11-11'
 
 # Create your views here.
 def home(request):
@@ -18,6 +21,15 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def dictionary(request):
+    search = request.GET.get('search')
+    dictionary = PyDictionary()
+    meanings = dictionary.meaning(search)
+    synonyms = dictionary.synonym(search)
+    antonyms = dictionary.antonym(search)
+
+    return render(request, 'dictionary.html', { 'search': search, 'meanings': meanings, 'synonyms': synonyms, 'antonyms': antonyms })
 
 @login_required
 def categories_index(request):
@@ -69,11 +81,11 @@ class CardCreate(CreateView):
     fields = ['word']
 
 class CardUpdate(UpdateView):
-    model = Card 
-    fields = ('word')
+    model = Card
+    fields = ('word') 
 
 class CardDelete(DeleteView):
-    model = Card  
+    model = Card 
     success_url = '/cards/'
 
 class CardDetail(DetailView):
@@ -85,7 +97,7 @@ class CardList(ListView):
     template_name = 'cards/index.html'  
 
 @login_required
-def add_photo(request, category_id):
+def add_photo(request, card_id):
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:
         s3 = boto3.client('s3')
@@ -93,8 +105,11 @@ def add_photo(request, category_id):
         try:
             s3.upload_fileobj(photo_file, BUCKET, key)
             url = f"{S3_BASE_URL}{BUCKET}/{key}"
-            photo = Photo(url=url, category_id=category_id)
+            photo = Photo(url=url, card_id=card_id)
             photo.save()
         except:
             print('An error occurred uploading file to S3')
-    return redirect('detail', category_id=category_id)    
+    return redirect('cards_detail', pk=card_id)    
+
+
+ 

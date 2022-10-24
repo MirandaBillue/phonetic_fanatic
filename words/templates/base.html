@@ -7,6 +7,7 @@
     background-image: url(https://i.imgur.com/XyQHGWe.png);
     background-image: url(https://i.imgur.com/6LiL524.png);
     background-image: url(https://i.imgur.com/JNjxAXY.png);
+    background-image: url(https://i.imgur.com/6LiL524.png);
    }
 </style>
 
@@ -37,6 +38,7 @@
                 </ul>
                 <ul class="nav-list">
                     <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'dictionary' %}">Dictionary</a></li>
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'index' %}">Categories</a></li>
                     <li><a href="{% url 'cards_index' %}">Word Cards</a></li>

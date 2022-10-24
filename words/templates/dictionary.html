@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="about">
+    <h1>Dictionary</h1>
+
+
+    <form action="search" method="post"> 
+   
+      <input type="text"  class="text" placeholder="Type A Word"/>
+      <input type="submit" value="Submit" class="btn" />
+    </form>
+  
+
+<h2>{{ entry }}</h2>
+
+    
+<p>Definition: {{ meanings }}</p>
+
+
+{% for synonym in synonyms %}
+<h2>Synonyms: {{ synonym }}, </h2>
+{% endfor %}
+
+{% for antonym in antonyms %}
+<h2>Antonyms: {{ antonym }}, </h2>
+{% endfor %}
+    
+
+
+
+</div>
+{% endblock %}

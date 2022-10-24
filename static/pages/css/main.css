@@ -101,6 +101,17 @@ nav ul {
     font-family: 'Archivo Black', sans-serif;
     font-size: 20px; }
 
+.card-index {
+  margin: 375px;
+  width: 350px;
+  height: 60px; }
+  .card-index h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 50px; }
+  .card-index h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px; }
+
 .c-detail {
   margin: 100px;
   width: 350px;
@@ -112,6 +123,20 @@ nav ul {
     font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
   .c-detail input {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 15px; }
+
+.card-detail {
+  margin: 100px;
+  width: 350px;
+  height: 65vh; }
+  .card-detail h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 50px; }
+  .card-detail form {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 15px; }
+  .card-detail input {
     font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
 
@@ -135,6 +160,21 @@ a {
     font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
   .c-form input {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 15px; }
+
+.card-add {
+  margin: 375px;
+  width: 350px;
+  height: 60px; }
+  .card-add h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 50px;
+    display: inline; }
+  .card-add form {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 15px; }
+  .card-add input {
     font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
 

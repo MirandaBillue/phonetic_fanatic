@@ -157,7 +157,44 @@ nav {
     }
 }
 
+.card-index {
+    margin: 375px;
+    width: 350px;
+    height: 60px;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 50px;
+    }
+
+    h2 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 20px;
+    }
+}
+
 .c-detail {
+    margin: 100px;
+    width: 350px;
+    height: 65vh;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 50px;
+    }
+
+    form {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+
+    input {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+}
+
+.card-detail {
     margin: 100px;
     width: 350px;
     height: 65vh;
@@ -189,6 +226,28 @@ a {
 }
 
 .c-form {
+    margin: 375px;
+    width: 350px;
+    height: 60px;
+
+    h1 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 50px;
+        display: inline;
+    }
+
+    form {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+
+    input {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
+    }
+}
+
+.card-add {
     margin: 375px;
     width: 350px;
     height: 60px;

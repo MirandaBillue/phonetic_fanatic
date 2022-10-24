@@ -1,7 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
 
-{% block content %}
-<div class="card-form">
+{% block additional_styles %}
+<style>
+   body {
+    background-image: url(https://i.imgur.com/vxNoItD.png);
+   }
+</style>
+{% endblock %}
+
+
+<div class="card-add">
     {% if object %}
     <h1>Update {{ object.name }}</h1>
     {% else %}
