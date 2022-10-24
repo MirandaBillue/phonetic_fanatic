@@ -4,7 +4,13 @@ body {
   background-image: url(https://i.imgur.com/YJD3WDB.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  font-family: 'Archivo Black', sans-serif; }
+  body h1 {
+    font-size: 50px; }
+  body h2 {
+    font-size: 20px;
+    color: #000000; }
 
 .nav {
   height: 60px;
@@ -14,7 +20,6 @@ body {
   margin: 0 auto; }
 
 .logo {
-  font-family: 'Archivo Black', sans-serif;
   float: left;
   line-height: 60px;
   text-transform: uppercase;
@@ -84,33 +89,32 @@ nav ul {
 
 .about {
   margin: 375px;
-  width: 350px;
-  height: 60px; }
+  width: 300px;
+  height: 10vh; }
   .about h1 {
     font-family: 'Archivo Black', sans-serif;
-    font-size: 60px; }
+    font-size: 70px; }
 
 .c-index {
-  margin: 375px;
-  width: 350px;
-  height: 60px; }
+  font-family: 'Archivo Black', sans-serif; }
   .c-index h1 {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 50px; }
   .c-index h2 {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 20px; }
 
-.card-index {
+.card-add {
   margin: 375px;
   width: 350px;
   height: 60px; }
-  .card-index h1 {
+  .card-add h1 {
     font-family: 'Archivo Black', sans-serif;
     font-size: 50px; }
-  .card-index h2 {
+  .card-add form {
     font-family: 'Archivo Black', sans-serif;
-    font-size: 20px; }
+    font-size: 15px; }
+  .card-add input {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 15px; }
 
 .c-detail {
   margin: 100px;
@@ -125,6 +129,15 @@ nav ul {
   .c-detail input {
     font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
+  .c-detail row {
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+  .c-detail column {
+    flex-basis: 16.66667%; }
 
 .card-detail {
   margin: 100px;
@@ -163,18 +176,18 @@ a {
     font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
 
-.card-add {
+.c-form {
   margin: 375px;
   width: 350px;
   height: 60px; }
-  .card-add h1 {
+  .c-form h1 {
     font-family: 'Archivo Black', sans-serif;
     font-size: 50px;
     display: inline; }
-  .card-add form {
+  .c-form form {
     font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
-  .card-add input {
+  .c-form input {
     font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
 

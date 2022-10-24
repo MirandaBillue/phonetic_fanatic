@@ -5,6 +5,7 @@ $link-hover-color: #fa0404;
 $breakpoint: 799px;
 $foot-background: black;
 $foot-font-color: white;
+$grid__bp-md: 768;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
@@ -15,6 +16,17 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-family: 'Archivo Black', sans-serif;
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: #000000
+    }
+
 }
 
 .nav {
@@ -27,7 +39,6 @@ body {
 }
 
 .logo {
-    font-family: 'Archivo Black', sans-serif;
     float: left;
     line-height: $nav-height;
     text-transform: uppercase;
@@ -132,32 +143,29 @@ nav {
 
 .about {
     margin: 375px;
-    width: 350px;
-    height: 60px;
+    width: 300px;
+    height: 10vh;
 
     h1 {
         font-family: 'Archivo Black', sans-serif;
-        font-size: 60px;
+        font-size: 70px;
     }
 }
 
 .c-index {
-    margin: 375px;
-    width: 350px;
-    height: 60px;
+    font-family: 'Archivo Black', sans-serif;
 
-    h1 {
-        font-family: 'Archivo Black', sans-serif;
+    h1 {    
         font-size: 50px;
     }
 
     h2 {
-        font-family: 'Archivo Black', sans-serif;
         font-size: 20px;
     }
+
 }
 
-.card-index {
+.card-add {
     margin: 375px;
     width: 350px;
     height: 60px;
@@ -167,9 +175,14 @@ nav {
         font-size: 50px;
     }
 
-    h2 {
+    form {
         font-family: 'Archivo Black', sans-serif;
-        font-size: 20px;
+        font-size: 15px;
+    }
+
+    input {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 15px;
     }
 }
 
@@ -191,6 +204,18 @@ nav {
     input {
         font-family: 'Archivo Black', sans-serif;
         font-size: 15px;
+    }
+
+    row {
+        width: 150px;
+        height: 30px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    column {
+        flex-basis: (100/6) * 1%;
     }
 }
 
@@ -222,7 +247,7 @@ nav {
 
 a {
     font-family: 'Archivo Black', sans-serif;
-    font-size: 15px; 
+    font-size: 15px;
 }
 
 .c-form {
@@ -247,7 +272,7 @@ a {
     }
 }
 
-.card-add {
+.c-form {
     margin: 375px;
     width: 350px;
     height: 60px;
@@ -278,10 +303,12 @@ a {
         font-family: 'Archivo Black', sans-serif;
         font-size: 70px;
     }
+
     h2 {
         font-family: 'Archivo Black', sans-serif;
         font-size: 30px;
     }
+
     input {
         font-family: 'Archivo Black', sans-serif;
         font-size: 20px;

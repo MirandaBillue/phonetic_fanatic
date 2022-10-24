@@ -1,5 +1,6 @@
 from urllib import response
 from django.shortcuts import render, redirect
+from PyDictionary import PyDictionary
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -7,7 +8,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from PyDictionary import PyDictionary
+
 import requests
 import uuid
 import boto3
@@ -22,14 +23,14 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-def dictionary(request):
+def word(request):
     search = request.GET.get('search')
     dictionary = PyDictionary()
-    meanings = dictionary.meaning(search)
+    meaning = dictionary.meaning(search)
     synonyms = dictionary.synonym(search)
     antonyms = dictionary.antonym(search)
-
-    return render(request, 'dictionary.html', { 'search': search, 'meanings': meanings, 'synonyms': synonyms, 'antonyms': antonyms })
+    context = {'search': search, 'meaning': meaning['Noun'][0], 'synonyms': synonyms, 'antonyms': antonyms }
+    return render(request, 'word.html', context)
 
 @login_required
 def categories_index(request):
@@ -82,7 +83,7 @@ class CardCreate(CreateView):
 
 class CardUpdate(UpdateView):
     model = Card
-    fields = ('word') 
+    fields = ['word'] 
 
 class CardDelete(DeleteView):
     model = Card 

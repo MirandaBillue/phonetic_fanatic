@@ -1,14 +1,14 @@
 {% load sass_tags %}
 {% block additional_styles %}
 <style>
-   body {
-    background-image: url(https://i.imgur.com/vxNoItD.png);
-    background-image: url(https://i.imgur.com/aQfHz3d.png);
-    background-image: url(https://i.imgur.com/XyQHGWe.png);
-    background-image: url(https://i.imgur.com/6LiL524.png);
-    background-image: url(https://i.imgur.com/JNjxAXY.png);
-    background-image: url(https://i.imgur.com/6LiL524.png);
-   }
+    body {
+        background-image: url(https://i.imgur.com/vxNoItD.png);
+        background-image: url(https://i.imgur.com/aQfHz3d.png);
+        background-image: url(https://i.imgur.com/XyQHGWe.png);
+        background-image: url(https://i.imgur.com/6LiL524.png);
+        background-image: url(https://i.imgur.com/JNjxAXY.png);
+        background-image: url(https://i.imgur.com/6LiL524.png);
+    }
 </style>
 
 {% endblock %}
@@ -23,8 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhoneticFanactict</title>
     <link href="{% sass_src 'pages/css/main.scss' %}" rel="stylesheet" type="text/css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 </head>
 
 <body class="body">
@@ -38,7 +37,7 @@
                 </ul>
                 <ul class="nav-list">
                     <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'dictionary' %}">Dictionary</a></li>
+                    <li><a href="{% url 'word' %}">Dictionary</a></li>
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'index' %}">Categories</a></li>
                     <li><a href="{% url 'cards_index' %}">Word Cards</a></li>
@@ -54,7 +53,7 @@
         </nav>
     </header>
     <main class="container">{% block content %} {% endblock %}</main>
-    <footer class="page-footer">
+    <footer>
         <div class="right">
             All Rights Reserved, &copy; 2022 Phonetic Fanatic
         </div>

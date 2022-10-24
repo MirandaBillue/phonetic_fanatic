@@ -4,7 +4,7 @@ from .import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
-    path('dictionary/', views.dictionary, name='dictionary'),
+    path('word/', views.word, name='word'),
     path('categories/', views.categories_index, name='index'),
     path('categories/<int:category_id>/', views.categories_detail, name='detail'),
     path('categories/create/', views.CategoryCreate.as_view(), name='categories_create'),

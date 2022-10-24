@@ -1,18 +1,19 @@
 {% extends 'base.html' %} {% block content %}
 
+{% block additional_styles %}
+<style>
+    body {
+        background-image: url(https://i.imgur.com/6LiL524.png);
+    }
+</style>
+{% endblock %}
+
 <div class="c-index">
-<h1>Categories</h1>
-
+<span class="white"><h1>Categories</h1></span>
 {% for category in categories %}
-<div>
     <a href="/categories/{{ category.id }}">
-       
-            <h2>{{ category.name }} {{ category.gradelevel }}</h2>
-            
-
-        </div>
+            <h2>{{ category.name }} - Grade Level: {{ category.gradelevel }}</h2> 
     </a>
-</div>
 </div>
 
 {% endfor %} {% endblock %}

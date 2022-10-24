@@ -10,15 +10,19 @@
 </style>
 {% endblock %}
 
+<h1>Words</h1>
 {% for card in object_list %}
-<div class="card-index">
-    <a href="{% url 'cards_detail' card.id %}">
-        <div class="card-content">
-            <span> {{ card.word }}</span>
-        </div>
-    </a>
+<div class="row">
+    <div class="col s12">
+        
+            <a href="{% url 'cards_detail' card.id %}">
+                <div class="card-panel hoverable">
+                    <h2> {{ card.word }}</h2>
+                </div>
+            </a>
+            {% endfor %}
+        
+    </div>
 </div>
-{% endfor %}
-
 
 {% endblock %}
