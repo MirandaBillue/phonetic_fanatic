@@ -1,5 +1,4 @@
 from urllib import response
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from PyDictionary import PyDictionary
 from django.views.generic import ListView
@@ -23,7 +22,19 @@ def about(request):
     return render(request, 'about.html')
 
 def word(request):
-        return render(request, 'word.html')
+   # search = request.GET.get('search')
+    #dictionary = PyDictionary()
+    #try:
+        #if search:
+            #meanings = dictionary.meaning(search)
+            #synonyms = dictionary.synonym(search)
+            #antonyms = dictionary.antonym(search)
+       
+        return render(request, 'word.html') 
+        #{'search': search, 'meanings': meanings, 'synonyms': synonyms, 'antonyms': antonyms })
+    #except TypeError:
+        #return render(request, 'home.html', {'search': search })
+
 
 @login_required
 def categories_index(request):
