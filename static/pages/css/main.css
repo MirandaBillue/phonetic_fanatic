@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+* {
+  box-sizing: border-box; }
+
 body {
   background-image: url(https://i.imgur.com/YJD3WDB.png);
   background-repeat: no-repeat;
@@ -106,6 +109,9 @@ nav ul {
     text-shadow: 3px #000000; }
   .c-index h2 {
     font-size: 20px; }
+  .c-index img {
+    max-width: 70%;
+    height: auto; }
 
 .card-add {
   padding-top: 350px;
@@ -139,15 +145,21 @@ nav ul {
     flex-basis: 16.66667%; }
 
 .card-detail {
-  padding-top: 250px;
-  width: 350px;
-  height: 65vh; }
+  padding-top: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". ."; }
   .card-detail h1 {
     font-size: 90px; }
   .card-detail form {
     font-size: 15px; }
   .card-detail input {
     font-size: 15px; }
+  .card-detail img {
+    max-width: 70%;
+    height: auto; }
 
 .img-text {
   font-size: 15px; }
@@ -178,6 +190,17 @@ a {
   .c-delete input {
     font-size: 20px; }
 
+.delete-card {
+  padding-top: 300px;
+  width: 900px;
+  height: 60px; }
+  .delete-card h1 {
+    font-size: 70px; }
+  .delete-card h2 {
+    font-size: 30px; }
+  .delete-card input {
+    font-size: 20px; }
+
 .signup {
   padding-top: 205px;
   width: 900px;
@@ -199,6 +222,10 @@ a {
     font-size: 25px; }
   .login input {
     font-size: 20px; }
+
+.card img {
+  max-width: 10%;
+  height: auto; }
 
 footer {
   height: 60px;

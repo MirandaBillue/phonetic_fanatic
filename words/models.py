@@ -7,11 +7,13 @@ from django.contrib.auth.models import User
 class Card(models.Model):
     word = models.CharField(max_length=100)
 
+    def get_absolute_url(self):
+        return reverse('cards_detail', kwargs={'pk': self.id})
+
     def __str__(self):
         return self.word
 
-    def get_absolute_url(self):
-        return reverse('cards_detail', kwargs={'pk': self.id})
+   
 
 
 class Category(models.Model):

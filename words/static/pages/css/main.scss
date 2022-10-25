@@ -6,10 +6,19 @@ $breakpoint: 799px;
 $foot-background: black;
 $foot-font-color: white;
 $grid__bp-md: 768;
+$grid-width: 100rem; 
+$gutter-vertical: 4rem; 
+$gutter-horizontal: 4rem;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+*{
+    box-sizing: border-box;
+  }
+
 
 body {
     background-image: url(https://i.imgur.com/YJD3WDB.png);
@@ -32,7 +41,6 @@ body {
     main {
         flex: 1 0 auto;
       }
-
 }
 
 .nav {
@@ -167,7 +175,10 @@ nav {
     h2 {
         font-size: 20px;
     }
-
+    img {
+        max-width: 70%;
+        height: auto;
+    }
 }
 
 .card-add {
@@ -216,23 +227,30 @@ nav {
     column {
         flex-basis: (100/6) * 1%;
     }
+    
 }
 
 .card-detail {
-    padding-top: 250px;
-    width: 350px;
-    height: 65vh;
+    padding-top: 300px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". ."; 
 
     h1 {
         font-size: 90px;
     }
-
     form {
         font-size: 15px;
     }
-
     input {
         font-size: 15px;
+    }
+    img {
+        max-width: 70%;
+        height: auto;
     }
 }
 
@@ -264,6 +282,24 @@ a {
 }
 
 .c-delete {
+    padding-top: 300px;
+    width: 900px;
+    height: 60px;
+
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    input {
+        font-size: 20px;
+    }
+}
+
+.delete-card {
     padding-top: 300px;
     width: 900px;
     height: 60px;
@@ -319,6 +355,12 @@ a {
     }
 }
 
+.card {
+    img {
+        max-width: 10%;
+        height: auto;
+    }  
+}
 
 footer {
     height: $nav-height;
