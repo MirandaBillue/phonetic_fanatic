@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/NEW_YORK'
+TIME_ZONE = 'EDT'
 
 USE_I18N = True
 
@@ -133,5 +133,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
