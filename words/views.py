@@ -1,4 +1,5 @@
 from urllib import response
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from PyDictionary import PyDictionary
 from django.views.generic import ListView
@@ -8,8 +9,6 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-
-import requests
 import uuid
 import boto3
 from .models import Category, Photo, Card
@@ -24,25 +23,22 @@ def about(request):
     return render(request, 'about.html')
 
 def word(request):
-    search = request.GET.get('search')
-    dictionary = PyDictionary()
-    meaning = dictionary.meaning(search)
-    synonyms = dictionary.synonym(search)
-    antonyms = dictionary.antonym(search)
-    context = {'search': search, 'meaning': meaning['Noun'][0], 'synonyms': synonyms, 'antonyms': antonyms }
-    return render(request, 'word.html', context)
+        return render(request, 'word.html')
 
 @login_required
 def categories_index(request):
     categories = Category.objects.filter(user=request.user)
     return render(request, 'categories/index.html', { 'categories': categories })
 
+@login_required
 def categories_detail(request, category_id):
     category = Category.objects.get(id=category_id)   
+    cards_category_doesnt_have = Category.objects.exclude(id__in = category.cards.all().values_list('id'))
 
     return render(request, 'categories/detail.html', { 
-        'category': category  })  
+        'category': category, 'cards': cards_category_doesnt_have  })  
 
+@login_required
 def assoc_card(request, category_id, card_id):
     Category.objects.get(id=category_id).cards.add(card_id)
     return redirect('detail', category_id=category_id)

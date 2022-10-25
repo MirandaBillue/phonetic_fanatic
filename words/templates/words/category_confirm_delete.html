@@ -4,12 +4,14 @@
 <h1>Delete Category</h1>
 
 <h2>This will permanently delete
-    <span>{{object.name}}</span>.</h2>
+    <span class="green-text">{{object.name}}
+         Grade: {{object.gradelevel}}</span>.</h2>
 
 <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn" />
-    <a href="{% url 'detail' category.id %}">Cancel</a>
+    <input type="submit" value="Yes - Delete!" class="btn red white-text" />
+    <a href="{% url 'detail' category.id %}" class="orange-text">Cancel</a>
 </form> 
+
 </div>   
 {% endblock %}

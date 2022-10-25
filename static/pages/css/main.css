@@ -5,12 +5,17 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  font-family: 'Archivo Black', sans-serif; }
+  font-family: 'Archivo Black', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
   body h1 {
     font-size: 50px; }
   body h2 {
     font-size: 20px;
     color: #000000; }
+  body main {
+    flex: 1 0 auto; }
 
 .nav {
   height: 60px;
@@ -78,7 +83,6 @@ nav ul {
   height: 65px; }
   .home h1 {
     font-size: 90px;
-    font-family: 'Abril Fatface', cursive;
     text-align: center;
     padding: 0; }
   .home h2 {
@@ -88,32 +92,30 @@ nav ul {
     color: red; }
 
 .about {
-  margin: 375px;
-  width: 300px;
-  height: 10vh; }
+  padding-top: 300px;
+  width: 1000px;
+  height: 88vh; }
   .about h1 {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 70px; }
 
 .c-index {
-  font-family: 'Archivo Black', sans-serif; }
+  width: 1000px; }
   .c-index h1 {
-    font-size: 50px; }
+    font-size: 50px;
+    color: white;
+    text-shadow: 3px #000000; }
   .c-index h2 {
     font-size: 20px; }
 
 .card-add {
-  margin: 375px;
-  width: 350px;
+  padding-top: 350px;
+  width: 900px;
   height: 60px; }
   .card-add h1 {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 50px; }
+    font-size: 80px; }
   .card-add form {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
   .card-add input {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
 
 .c-detail {
@@ -121,13 +123,10 @@ nav ul {
   width: 350px;
   height: 65vh; }
   .c-detail h1 {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 50px; }
   .c-detail form {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
   .c-detail input {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
   .c-detail row {
     width: 150px;
@@ -140,100 +139,70 @@ nav ul {
     flex-basis: 16.66667%; }
 
 .card-detail {
-  margin: 100px;
+  padding-top: 250px;
   width: 350px;
   height: 65vh; }
   .card-detail h1 {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 50px; }
+    font-size: 90px; }
   .card-detail form {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
   .card-detail input {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
 
 .img-text {
-  font-family: 'Archivo Black', sans-serif;
   font-size: 15px; }
 
 a {
-  font-family: 'Archivo Black', sans-serif;
   font-size: 15px; }
 
 .c-form {
-  margin: 375px;
-  width: 350px;
+  padding-top: 380px;
+  width: 800px;
   height: 60px; }
   .c-form h1 {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 50px;
     display: inline; }
   .c-form form {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
   .c-form input {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 15px; }
-
-.c-form {
-  margin: 375px;
-  width: 350px;
-  height: 60px; }
-  .c-form h1 {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 50px;
-    display: inline; }
-  .c-form form {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 15px; }
-  .c-form input {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
 
 .c-delete {
-  margin: 375px;
-  height: 70px; }
+  padding-top: 300px;
+  width: 900px;
+  height: 60px; }
   .c-delete h1 {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 70px; }
   .c-delete h2 {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 30px; }
   .c-delete input {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 20px; }
 
 .signup {
-  margin: 375px;
+  padding-top: 205px;
+  width: 900px;
   height: 60px; }
   .signup h1 {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 50px; }
   .signup form {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
   .signup input {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 15px; }
 
 .login {
-  margin: 375px;
+  padding-top: 250px;
+  width: 500px;
   height: 60px; }
   .login h1 {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 60px; }
   .login form {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 25px; }
   .login input {
-    font-family: 'Archivo Black', sans-serif;
     font-size: 20px; }
 
 footer {
   height: 60px;
   background: black;
-  font-family: 'Archivo Black', sans-serif;
   color: white;
   text-align: center;
   font-size: 1.2rem; }

@@ -26,6 +26,9 @@ class Category(models.Model):
     def get_absolute_url(self):
         return reverse('detail', kwargs={'category_id': self.id})
 
+    class Meta:
+        ordering = ['-gradelevel']
+
 
 class Photo(models.Model):
     url = models.CharField(max_length=200)

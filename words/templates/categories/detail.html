@@ -27,7 +27,7 @@
             <div class="card">
                 <span>
                     {{ card.word }}</span>
-                </span>
+                
             </div>
             {% endfor %} {% else %}
             <h5>No words :(</h5>
@@ -35,6 +35,29 @@
         </div>
     </div>
 
-
+    <div class="row">
+        <div class="col s6">
+            <h3>Available Words</h3>
+            {% if cards.count %}
+            {% for card in cards.all %}
+            <div class="card red-text">
+                <div class="card-content">
+                    <span>
+                         {{ card.word }}
+                        </span>
+                </div>
+                <div class="card-action">
+                    <form action="{% url 'assoc_card' category.id card.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="red">Add</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <h5>{{category.name}} Already Has All cards Available</h5>
+            {% endif %}
+        </div>
+    </div>
 
 {% endblock %}

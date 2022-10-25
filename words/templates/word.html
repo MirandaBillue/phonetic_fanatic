@@ -3,17 +3,14 @@
 <div class="about">
     <h1>Dictionary</h1>
 
-    <form action="word"> 
+    <form action="dictionary"> 
       <input type="text"  name='search' placeholder="Type A Word"/>
-      <input type="submit" value="Submit" class="btn" />
+      <input type="submit" value="Submit" class="btn blue" />
     </form>
-  
 
-
-
-
+<h2>{{search}}</h2>
     
-<p>Definition: {{ meaning }}</p>
+<p> {{ meaning }}</p>
 
 
 {% for synonym in synonyms %}
@@ -24,8 +21,5 @@
 <h2>Antonyms: {{ antonym }}, </h2>
 {% endfor %}
     
-
-
-
 </div>
 {% endblock %}
