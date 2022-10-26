@@ -17,7 +17,6 @@ Vocabulary is a key factor in the development of a childs reading and writing sk
 * Python
 * SASS
 * HTML
-* CSS
 * Amazon S3
 * PostgreSQL
 * Materialize
