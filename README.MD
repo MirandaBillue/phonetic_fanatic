@@ -26,10 +26,13 @@ Vocabulary is a key factor in the development of a childs reading and writing sk
 
 ## Features
 * Users can create a category to add words.
-* Users can add words to the category.
-* Users can add images to words
+* Users can review words.
+* Users can add images to words.
 
 ## Screenshots
+[Screen Shot 2022-10-25 at 11 29 40 AM](https://user-images.githubusercontent.com/110904846/198026191-a8cf0089-8744-48d7-a436-5723b149f0da.png)
+[Screen Shot 2022-10-25 at 11 49 02 AM](https://user-images.githubusercontent.com/110904846/198026296-4652979d-465f-4ceb-9987-645b7e2043a8.png)
+[Screen Shot 2022-10-25 at 11 48 46 AM](https://user-images.githubusercontent.com/110904846/198026113-001f11f1-79f3-46cf-a906-12e77b09861f.png)
 
 
 
@@ -42,7 +45,9 @@ Vocabulary is a key factor in the development of a childs reading and writing sk
 [Trello](https://trello.com/invite/b/DWb6R41z/ATTI0728f4a443ea2c2d9bd591ce8bd15b5691DA6FBD/project-4)
 
 ## Wireframe
-()
+[Wireframe](https://user-images.githubusercontent.com/110904846/198025616-310832d1-c35f-443c-9b64-41e8b8331db8.png)
+[Wireframe](https://user-images.githubusercontent.com/110904846/198025624-e4a0ecaa-26bc-4970-9554-194754fc3255.png)
+
 
 ## Getting Started
 * [Phonetic Fanatic](https://phonetic-fanatic.herokuapp.com/)
@@ -59,3 +64,4 @@ Vocabulary is a key factor in the development of a childs reading and writing sk
 * Stack Overflow
 * Django Documentation
 * GitHub pages
+* Python Package Index
