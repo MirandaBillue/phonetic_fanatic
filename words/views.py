@@ -44,7 +44,7 @@ def categories_index(request):
 @login_required
 def categories_detail(request, category_id):
     category = Category.objects.get(id=category_id)   
-    cards_category_doesnt_have = Category.objects.exclude(id__in = category.cards.all().values_list('id'))
+    cards_category_doesnt_have = Card.objects.exclude(id__in = category.cards.all().values_list('id'))
 
     return render(request, 'categories/detail.html', { 
         'category': category, 'cards': cards_category_doesnt_have  })  
