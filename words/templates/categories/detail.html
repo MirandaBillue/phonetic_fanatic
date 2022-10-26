@@ -44,14 +44,14 @@
         {% for card in cards.all %}
         <div class="card red-text">
             <div class="card-content">
-                <span class="card-title">
-                    <h3>{{ card.word }}</h3>
+                <span class="card-title blue-text">
+                    <h5>{{ card.word }}</h5>
                 </span>
             </div>
             <div class="card-action">
                 <form action="{% url 'assoc_card' category.id card.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="red">Add</button>
+                    <button type="submit" class="btn red white-text">Add</button>
                 </form>
             </div>
         </div>
