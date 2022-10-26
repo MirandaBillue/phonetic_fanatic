@@ -31,14 +31,9 @@ Vocabulary is a key factor in the development of a childs reading and writing sk
 
 ## Screenshots
 ![Screen Shot 2022-10-25 at 11 29 40 AM](https://user-images.githubusercontent.com/110904846/198026191-a8cf0089-8744-48d7-a436-5723b149f0da.png)
-![Screen Shot 2022-10-25 at 11 49 02 AM](https://user-images.githubusercontent.com/110904846/198026296-4652979d-465f-4ceb-9987-645b7e2043a8.png)
 ![Screen Shot 2022-10-25 at 11 48 46 AM](https://user-images.githubusercontent.com/110904846/198026113-001f11f1-79f3-46cf-a906-12e77b09861f.png)
-
-
-
-
-
-
+![Screen Shot 2022-10-25 at 11 49 02 AM](https://user-images.githubusercontent.com/110904846/198026296-4652979d-465f-4ceb-9987-645b7e2043a8.png)
+![Screen Shot 2022-10-26 at 8 31 58 AM](https://user-images.githubusercontent.com/110904846/198026785-bec4dbae-799f-49c3-bd4b-fcda8d2739d7.png)
 
 
 ## Trello Planning
